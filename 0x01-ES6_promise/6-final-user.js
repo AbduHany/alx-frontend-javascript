@@ -8,10 +8,10 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
       for (const output of val) {
         const object = {
           status: output.status,
-          value: (output.value || output.reason),
+          value: (output.value || output.reason.message),
         };
         arr.push(object);
       }
-      console.log(arr);
+      return arr;
     });
 }
