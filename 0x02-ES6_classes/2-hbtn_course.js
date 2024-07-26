@@ -7,9 +7,7 @@ export default class HolbertonCourse {
     } else if (students.constructor !== Array) {
       throw new TypeError('Students must be an array');
     }
-    for (let i = 0; i < students.length; i += 1) {
-      if (students[i].constructor !== String) throw new TypeError('students must contain only strings');
-    }
+
     this._name = name;
     this._length = length;
     this._students = students;
